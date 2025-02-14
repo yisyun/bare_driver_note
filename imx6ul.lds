@@ -2,8 +2,8 @@ SECTIONS{
     . = 0x87800000;
     .text :
     {
-        start.o
-        led.o
+        obj/start.o
+        obj/main.o
         *(.text)
     }
 

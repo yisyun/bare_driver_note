@@ -1,5 +1,5 @@
-#ifndef __LED_H
-#define __LED_H
+#ifndef __REG_H
+#define __REG_H
 
 #define CCM_CCGR0       *((volatile unsigned int *)0x020C4068)
 #define CCM_CCGR1       *((volatile unsigned int *)0x020C406C)
@@ -12,6 +12,5 @@
 #define PAD_GPIO1_IO03  *((volatile unsigned int *)0x020E02F4)
 #define GPIO1_GDIR      *((volatile unsigned int *)0x0209C004)
 #define GPIO1_DR        *((volatile unsigned int *)0x0209C000)
-
 
 #endif
