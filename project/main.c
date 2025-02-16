@@ -5,14 +5,15 @@
 
 int main(void)
 {
+    init_clock();
     enable_clock();
     init_gpio();
 
     while (1) {
     led_on();
-    delay(200);
+    delay(30000);
     led_off();
-    delay(1000);
+    delay(30000);
     }
 
     return 0;

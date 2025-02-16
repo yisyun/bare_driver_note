@@ -13,4 +13,8 @@
 #define GPIO1_GDIR      *((volatile unsigned int *)0x0209C004)
 #define GPIO1_DR        *((volatile unsigned int *)0x0209C000)
 
+#define CCM_CCSR        *((volatile unsigned int *)0x020C400C)
+#define CCM_ANALOG_PLL_ARM        *((volatile unsigned int *)0x020C8000)
+#define CCM_CACRR        *((volatile unsigned int *)0x020C4000)
+
 #endif

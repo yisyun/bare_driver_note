@@ -4,5 +4,6 @@
 #include "reg.h"
 
 void enable_clock(void);
+void init_clock(void);
 
 #endif
