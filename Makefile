@@ -1,4 +1,4 @@
-TARGET := led
+TARGET := beep
 CROSS_COMPILE := arm-linux-gnueabihf-
 
 CC := $(CROSS_COMPILE)gcc
@@ -9,12 +9,14 @@ OBJDUMP := $(CROSS_COMPILE)objdump
 INCDIRS 		:=	reg \
 					modules/clk \
 					modules/led \
-					modules/delay
+					modules/delay \
+					modules/beep
 
 SRCDIRS 		:=	project \
 					modules/clk \
 					modules/led \
-					modules/delay
+					modules/delay \
+					modules/beep
 #設定gcc include變數
 INCLUDE			:= $(patsubst %, -I %, $(INCDIRS))
 #設定obj/*.o變數

@@ -17,4 +17,9 @@
 #define CCM_ANALOG_PLL_ARM        *((volatile unsigned int *)0x020C8000)
 #define CCM_CACRR        *((volatile unsigned int *)0x020C4000)
 
+#define MUX_GPIO5_IO01  *((volatile unsigned int *)0x020E0020)
+#define PAD_GPIO5_IO01  *((volatile unsigned int *)0x020E02AC)
+#define GPIO5_DR        *((volatile unsigned int *)0x020AC000)
+#define GPIO5_GDIR      *((volatile unsigned int *)0x020AC004)
+
 #endif
