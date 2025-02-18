@@ -4,7 +4,7 @@ void init_gpio(void)
 {
     MUX_GPIO1_IO03 = 0x5;
     PAD_GPIO1_IO03 = 0x10B0;
-    GPIO1_GDIR = 0x00000008;
+    GPIO1_GDIR |= (1 << 3);
     GPIO1_DR = 0x0;
 }
 

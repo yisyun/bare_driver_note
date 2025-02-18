@@ -1,4 +1,4 @@
-TARGET := beep
+TARGET := key
 CROSS_COMPILE := arm-linux-gnueabihf-
 
 CC := $(CROSS_COMPILE)gcc
@@ -10,13 +10,15 @@ INCDIRS 		:=	reg \
 					modules/clk \
 					modules/led \
 					modules/delay \
-					modules/beep
+					modules/beep \
+					modules/key
 
 SRCDIRS 		:=	project \
 					modules/clk \
 					modules/led \
 					modules/delay \
-					modules/beep
+					modules/beep \
+					modules/key
 #設定gcc include變數
 INCLUDE			:= $(patsubst %, -I %, $(INCDIRS))
 #設定obj/*.o變數

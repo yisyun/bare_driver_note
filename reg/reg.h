@@ -22,4 +22,7 @@
 #define GPIO5_DR        *((volatile unsigned int *)0x020AC000)
 #define GPIO5_GDIR      *((volatile unsigned int *)0x020AC004)
 
+#define MUX_GPIO1_IO18      *((volatile unsigned int *)0x020E008C)
+#define PAD_GPIO1_IO18      *((volatile unsigned int *)0x020E0318)
+
 #endif
