@@ -4,6 +4,7 @@
 #include "beep.h"
 #include "key.h"
 #include "led.h"
+#include "uart.h"
 
 int main(void)
 {
@@ -12,8 +13,10 @@ int main(void)
     init_key();
     init_gpio();
     init_beep();
+    uart_init();
     
     beep_switch(OFF);
+	puts("hello\n");
     while (1) {
       if (get_key() == 1) {
             beep_switch(ON);
@@ -28,3 +31,4 @@ int main(void)
 
     return 0;
 }
+

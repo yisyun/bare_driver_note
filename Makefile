@@ -1,4 +1,4 @@
-TARGET := key
+TARGET := uart
 CROSS_COMPILE := arm-linux-gnueabihf-
 
 CC := $(CROSS_COMPILE)gcc
@@ -11,14 +11,17 @@ INCDIRS 		:=	reg \
 					modules/led \
 					modules/delay \
 					modules/beep \
-					modules/key
+					modules/key \
+					modules/uart
 
 SRCDIRS 		:=	project \
 					modules/clk \
 					modules/led \
 					modules/delay \
 					modules/beep \
-					modules/key
+					modules/key \
+					modules/uart
+
 #設定gcc include變數
 INCLUDE			:= $(patsubst %, -I %, $(INCDIRS))
 #設定obj/*.o變數
@@ -28,7 +31,7 @@ SFILENDIR		:= $(notdir  $(SFILES))
 CFILENDIR		:= $(notdir  $(CFILES))
 SOBJS			:= $(patsubst %, obj/%, $(SFILENDIR:.S=.o))
 COBJS			:= $(patsubst %, obj/%, $(CFILENDIR:.c=.o))
-OBJS			:= $(SOBJS) $(COBJS) 
+OBJS			:= $(SOBJS) $(COBJS)
 
 VPATH			:= $(SRCDIRS)
 
@@ -41,11 +44,11 @@ $(TARGET).bin:$(OBJS)
 	$(OBJDUMP) -D -m arm $(TARGET).elf > $(TARGET).dis
 
 $(SOBJS) : obj/%.o : %.S
-	$(CC) -Wall -nostdlib -c -O2 $(INCLUDE) -o $@ $<
-	
+	$(CC) -Wall -nostdlib -fno-builtin -c -O2 $(INCLUDE) -o $@ $<
+
 $(COBJS) : obj/%.o : %.c
-	$(CC) -Wall -nostdlib -c -O2 $(INCLUDE) -o $@ $<
-	
+	$(CC) -Wall -nostdlib -fno-builtin -c -O2 $(INCLUDE) -o $@ $<
+
 clean:
 	rm -rf *.o $(TARGET).bin $(TARGET).elf $(TARGET).dis $(SOBJS) $(COBJS)
 	

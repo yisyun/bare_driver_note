@@ -25,4 +25,20 @@
 #define MUX_GPIO1_IO18      *((volatile unsigned int *)0x020E008C)
 #define PAD_GPIO1_IO18      *((volatile unsigned int *)0x020E0318)
 
+#define UART1_URXD      *((volatile unsigned int *)0x02020000)
+#define UART1_UTXD      *((volatile unsigned int *)0x02020040)
+#define UART1_UCR1      *((volatile unsigned int *)0x02020080)
+#define UART1_UCR2      *((volatile unsigned int *)0x02020084)
+#define UART1_UCR3      *((volatile unsigned int *)0x02020088)
+#define UART1_UCR4      *((volatile unsigned int *)0x0202008C)
+#define UART1_UFCR      *((volatile unsigned int *)0x02020090)
+#define UART1_UBIR      *((volatile unsigned int *)0x020200A4)
+#define UART1_UBMR      *((volatile unsigned int *)0x020200A8)
+#define UART1_USR2      *((volatile unsigned int *)0x02020098)
+
+#define MUX_UART1_TX      *((volatile unsigned int *)0x020E0084)
+#define MUX_UART1_RX      *((volatile unsigned int *)0x020E0088)
+#define PAD_UART1_TX      *((volatile unsigned int *)0x020E0310)
+#define PAD_UART1_RX      *((volatile unsigned int *)0x020E0314)
+
 #endif
