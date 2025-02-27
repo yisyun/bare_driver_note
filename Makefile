@@ -1,4 +1,4 @@
-TARGET := uart
+TARGET := int
 CROSS_COMPILE := arm-linux-gnueabihf-
 
 CC := $(CROSS_COMPILE)gcc
@@ -12,7 +12,8 @@ INCDIRS 		:=	reg \
 					modules/delay \
 					modules/beep \
 					modules/key \
-					modules/uart
+					modules/uart \
+					modules/int
 
 SRCDIRS 		:=	project \
 					modules/clk \
@@ -20,7 +21,8 @@ SRCDIRS 		:=	project \
 					modules/delay \
 					modules/beep \
 					modules/key \
-					modules/uart
+					modules/uart \
+					modules/int
 
 #設定gcc include變數
 INCLUDE			:= $(patsubst %, -I %, $(INCDIRS))
