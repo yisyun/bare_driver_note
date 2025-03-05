@@ -13,16 +13,19 @@ INCDIRS 		:=	reg \
 					modules/beep \
 					modules/key \
 					modules/uart \
-					modules/int
+					modules/int \
+					modules/exint
 
 SRCDIRS 		:=	project \
+					reg \
 					modules/clk \
 					modules/led \
 					modules/delay \
 					modules/beep \
 					modules/key \
 					modules/uart \
-					modules/int
+					modules/int \
+					modules/exint
 
 #設定gcc include變數
 INCLUDE			:= $(patsubst %, -I %, $(INCDIRS))
